@@ -1,7 +1,11 @@
 function CostItem() {
   return (
     <div>
-      <h2>Cost Item</h2>
+      <div>March 2021 12</div>
+      <div>
+        <h2>Fridge</h2>
+        <div>$999.99</div>
+      </div>
     </div>
   )
 }
