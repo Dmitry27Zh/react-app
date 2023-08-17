@@ -1,12 +1,16 @@
 import './CostItem.css'
 
 function CostItem() {
+  const date = new Date(2021, 12, 2)
+  const title = 'Fridge'
+  const price = '999.99'
+
   return (
     <div className="cost-item">
-      <div>March 2021 12</div>
+      <div>{date.toLocaleDateString('ru')}</div>
       <div className="cost-item__description">
-        <h2>Fridge</h2>
-        <div className="cost-item__price">$999.99</div>
+        <h2>{title}</h2>
+        <div className="cost-item__price">${price}</div>
       </div>
     </div>
   )
