@@ -6,6 +6,11 @@ function App() {
     <div>
       <h1>Start learning React!</h1>
       <CostItem></CostItem>
+      <CostItem></CostItem>
+      <CostItem></CostItem>
+      <CostItem></CostItem>
+      <CostItem></CostItem>
+      <CostItem></CostItem>
     </div>
   )
 }
