@@ -1,9 +1,7 @@
 import './CostItem.css'
 
-function CostItem() {
-  const date = new Date(2021, 12, 2)
-  const title = 'Fridge'
-  const price = '999.99'
+function CostItem(props) {
+  const { date, title, price } = props
 
   return (
     <div className="cost-item">
