@@ -1,11 +1,16 @@
 import CostDate from './CostDate'
 import './CostItem.css'
 import Card from '../UI/Card'
+import { useState } from 'react'
 
 function CostItem(props) {
-  const { date, title, price } = props
+  const [{ date, title, price }, setCost] = useState(props)
   const changeDescriptionHandler = () => {
-    console.log('Change description!')
+    setCost({
+      date,
+      price,
+      title: 'New title!',
+    })
   }
 
   return (
