@@ -3,7 +3,7 @@ import './CostItem.css'
 import Card from '../UI/Card'
 import { useState } from 'react'
 
-function CostItem(props) {
+const CostItem = (props) => {
   const [{ date, title, price }, setCost] = useState(props)
   const changeDescriptionHandler = () => {
     setCost({
