@@ -6,7 +6,11 @@ const CostForm = () => {
       <div className="new-cost__controls">
         <div className="new-cost__control">
           <label htmlFor="title">Title</label>
-          <input type="text" id="title" name="title" min="0.01" step="0.01" />
+          <input type="text" id="title" name="title" />
+        </div>
+        <div className="new-cost__control">
+          <label htmlFor="sum">Sum</label>
+          <input type="number" id="sum" name="sum" min="0.01" step="0.01" />
         </div>
         <div className="new-cost__control">
           <label htmlFor="date">Date</label>
