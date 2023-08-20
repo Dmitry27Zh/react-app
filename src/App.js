@@ -1,5 +1,5 @@
 import './App.css'
-import Costs from './components/costs/Costs'
+import Costs from './components/Costs/Costs'
 
 const App = () => {
   const costs = [
