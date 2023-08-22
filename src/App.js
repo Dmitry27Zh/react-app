@@ -3,7 +3,6 @@ import Costs from './components/Costs/Costs'
 import NewCost from './components/NewCost/NewCost'
 
 const App = () => {
-  let year = 2022
   const costs = [
     {
       id: 'cost 1',
@@ -24,10 +23,6 @@ const App = () => {
       price: '20',
     },
   ]
-  const changeYearHandler = (newYear) => {
-    year = newYear
-    console.log(year)
-  }
   const addNewCostHandler = (costData) => {
     console.log(costData)
   }
@@ -35,7 +30,7 @@ const App = () => {
   return (
     <div>
       <NewCost onAddNewCost={addNewCostHandler} />
-      <Costs year={year} costs={costs} onYearChange={changeYearHandler} />
+      <Costs costs={costs} />
     </div>
   )
 }
