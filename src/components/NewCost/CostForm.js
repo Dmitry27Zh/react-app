@@ -1,8 +1,18 @@
+import { useState } from 'react'
 import './CostForm.css'
 
 const CostForm = () => {
+  const [name, setName] = useState('')
+  const [price, setPrice] = useState('')
+  const [date, setDate] = useState('')
   const nameChangeHandler = (event) => {
-    console.log(event)
+    setName(event.target.value)
+  }
+  const priceChangeHandler = (event) => {
+    setPrice(event.target.value)
+  }
+  const dateChangeHandler = (event) => {
+    setDate(event.target.value)
   }
 
   return (
@@ -10,15 +20,18 @@ const CostForm = () => {
       <div className="new-cost__controls">
         <div className="new-cost__control">
           <label htmlFor="name">Name</label>
+          <b>{name}</b>
           <input type="text" id="name" name="name" onChange={nameChangeHandler} />
         </div>
         <div className="new-cost__control">
-          <label htmlFor="sum">Sum</label>
-          <input type="number" id="sum" name="sum" min="0.01" step="0.01" />
+          <label htmlFor="price">Price</label>
+          <b>{price}</b>
+          <input type="number" id="price" name="price" min="0.01" step="0.01" onChange={priceChangeHandler} />
         </div>
         <div className="new-cost__control">
           <label htmlFor="date">Date</label>
-          <input type="date" id="date" name="date" min="2019-01-01" max="2022-12-12" />
+          <b>{date}</b>
+          <input type="date" id="date" name="date" min="2019-01-01" max="2022-12-12" onChange={dateChangeHandler} />
         </div>
       </div>
       <div className="new-costs__actions">

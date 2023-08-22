@@ -6,17 +6,17 @@ const App = () => {
   const costs = [
     {
       date: new Date(2021, 12, 2),
-      title: 'Fridge',
+      name: 'Fridge',
       price: '999.99',
     },
     {
       date: new Date(2022, 2, 1),
-      title: 'MacBook',
+      name: 'MacBook',
       price: '1200',
     },
     {
       date: new Date(2022, 5, 6),
-      title: 'Jeans',
+      name: 'Jeans',
       price: '20',
     },
   ]

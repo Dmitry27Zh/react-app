@@ -7,9 +7,9 @@ const Costs = (props) => {
 
   return (
     <Card className="costs">
-      <CostItem date={costs[0].date} title={costs[0].title} price={costs[0].price} />
-      <CostItem date={costs[1].date} title={costs[1].title} price={costs[1].price} />
-      <CostItem date={costs[2].date} title={costs[2].title} price={costs[2].price} />
+      <CostItem date={costs[0].date} name={costs[0].name} price={costs[0].price} />
+      <CostItem date={costs[1].date} name={costs[1].name} price={costs[1].price} />
+      <CostItem date={costs[2].date} name={costs[2].name} price={costs[2].price} />
     </Card>
   )
 }
