@@ -22,6 +22,9 @@ const CostForm = () => {
       date: new Date(date),
     }
     console.log(data)
+    setName('')
+    setPrice('')
+    setDate('')
   }
 
   return (
@@ -29,18 +32,31 @@ const CostForm = () => {
       <div className="new-cost__controls">
         <div className="new-cost__control">
           <label htmlFor="name">Name</label>
-          <b>{name}</b>
-          <input type="text" id="name" name="name" onChange={nameChangeHandler} />
+          <input type="text" id="name" name="name" value={name} onChange={nameChangeHandler} />
         </div>
         <div className="new-cost__control">
           <label htmlFor="price">Price</label>
-          <b>{price}</b>
-          <input type="number" id="price" name="price" min="0.01" step="0.01" onChange={priceChangeHandler} />
+          <input
+            type="number"
+            id="price"
+            name="price"
+            min="0.01"
+            step="0.01"
+            value={price}
+            onChange={priceChangeHandler}
+          />
         </div>
         <div className="new-cost__control">
           <label htmlFor="date">Date</label>
-          <b>{date}</b>
-          <input type="date" id="date" name="date" min="2019-01-01" max="2022-12-12" onChange={dateChangeHandler} />
+          <input
+            type="date"
+            id="date"
+            name="date"
+            min="2019-01-01"
+            max="2022-12-12"
+            value={date}
+            onChange={dateChangeHandler}
+          />
         </div>
       </div>
       <div className="new-costs__actions">
