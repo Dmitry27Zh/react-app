@@ -14,9 +14,18 @@ const CostForm = () => {
   const dateChangeHandler = (event) => {
     setDate(event.target.value)
   }
+  const submitHandler = (event) => {
+    event.preventDefault()
+    const data = {
+      name,
+      price,
+      date: new Date(date),
+    }
+    console.log(data)
+  }
 
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-cost__controls">
         <div className="new-cost__control">
           <label htmlFor="name">Name</label>
