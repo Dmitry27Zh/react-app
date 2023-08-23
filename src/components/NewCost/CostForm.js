@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './CostForm.css'
 
 const CostForm = (props) => {
-  const { onSaveCostData } = props
+  const { onSaveCostData, onCancel } = props
   const [name, setName] = useState('')
   const [price, setPrice] = useState('')
   const [date, setDate] = useState('')
@@ -26,6 +26,7 @@ const CostForm = (props) => {
     setName('')
     setPrice('')
     setDate('')
+    onCancel()
   }
 
   return (
@@ -60,9 +61,11 @@ const CostForm = (props) => {
           />
         </div>
       </div>
-      <div className="new-costs__actions">
+      <div className="new-cost__actions">
         <button type="submit">Add</button>
-        <button type="reset">Cancel</button>
+        <button type="reset" onClick={onCancel}>
+          Cancel
+        </button>
       </div>
     </form>
   )
