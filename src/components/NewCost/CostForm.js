@@ -26,7 +26,6 @@ const CostForm = (props) => {
     setName('')
     setPrice('')
     setDate('')
-    onCancel()
   }
 
   return (

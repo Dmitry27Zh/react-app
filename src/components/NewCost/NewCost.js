@@ -5,18 +5,19 @@ import './NewCost.css'
 const NewCost = (props) => {
   const { onAddNewCost } = props
   const [formShowed, setFormShowed] = useState(false)
+  const addHandler = () => {
+    setFormShowed(true)
+  }
+  const cancelHandler = () => {
+    setFormShowed(false)
+  }
   const saveCostDataHandler = (inputData) => {
     const costData = {
       ...inputData,
       id: Math.random().toString(),
     }
     onAddNewCost(costData)
-  }
-  const addHandler = () => {
-    setFormShowed(true)
-  }
-  const cancelHandler = () => {
-    setFormShowed(false)
+    cancelHandler()
   }
   const renderButton = () => {
     if (!formShowed) {
