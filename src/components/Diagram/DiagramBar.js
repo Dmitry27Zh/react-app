@@ -2,7 +2,8 @@ import './DiagramBar.css'
 
 const DiagramBar = (props) => {
   const { value, maxValue, label } = props
-  const height = `${(value / maxValue) * 100}%`
+  const progress = value / maxValue || 0
+  const height = `${progress * 100}%`
 
   return (
     <div className="diagram-bar">
