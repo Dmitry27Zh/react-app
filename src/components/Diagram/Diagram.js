@@ -1,5 +1,5 @@
 import DiagramBar from './DiagramBar'
-import './DiagramBar.css'
+import './Diagram.css'
 
 const Diagram = (props) => {
   const { dataSets } = props

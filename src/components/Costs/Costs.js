@@ -12,7 +12,7 @@ const Costs = (props) => {
     setYear(newYear)
   }
   const filteredCosts = costs.filter((cost) => new Date(cost.date).getFullYear().toString() === year)
-  const dataSets = [{ label: 'Jan', value: 300, maxValue: 1000 }]
+  const dataSets = [{ label: 'Jan', value: 1000, maxValue: 1000 }]
 
   return (
     <Card className="costs">
